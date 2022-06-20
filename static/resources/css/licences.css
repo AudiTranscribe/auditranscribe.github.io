@@ -18,15 +18,20 @@ nav {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header_background.png);
     background-size: cover;
     background-position: center;
-    height: 20vh;
+    height: 30vh;
     background-attachment: fixed;
 }
 
 .hero-box {
     position: absolute;
-    top: 10vh;
+    top: 15vh;
     transform: translate(calc(50vw - 50%), -50%);
     color: white;
+}
+
+.hero-box > p {
+    max-width: 75vw;
+    text-align: center;
 }
 
 /* Navbar */
