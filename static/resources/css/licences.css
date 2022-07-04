@@ -75,3 +75,22 @@ nav {
     margin-top: 30px;
     float: left;
 }
+
+/* QUERIES */
+/* Styling for screens that are smaller than the maximum width*/
+@media screen and (max-width: 1080px) {
+    /* Device Styling */
+    .desktop {
+        display: none;
+    }
+
+    /* General Styling */
+    .card-container {
+        display: block;
+    }
+
+    /* Navbar */
+    .logo {
+        display: none;
+    }
+}

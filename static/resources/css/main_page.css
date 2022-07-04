@@ -22,12 +22,25 @@ p {
 }
 
 /* CLASS-BASED STYLING */
+/* Device Styling */
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
 /* General Styling */
 .card {
     background-color: #fff;
     border-radius: 10px;
     padding: 25px !important;
     margin: 20px;
+}
+
+.card-container {
+    display: flex;
 }
 
 .container {
@@ -132,7 +145,37 @@ footer p {
     text-align: center;
 }
 
-/* ELEMENT-BASED STYLING */
-#upload-file-input {
-    display: none;
+/* QUERIES */
+/* Styling for screens that are smaller than the maximum width*/
+@media screen and (max-width: 1080px) {
+    /* Device Styling */
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    /* General Styling */
+    .card-container {
+        display: block;
+    }
+
+    .card {
+        width: calc(100% - 90px);
+    }
+
+    .row {
+        display: block;
+    }
+
+    .row img, .row video {
+        width: 100%;
+    }
+
+    /* Navbar */
+    .logo {
+        display: none;
+    }
 }
