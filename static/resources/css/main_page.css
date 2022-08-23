@@ -117,6 +117,7 @@ p {
     color: white;
     display: inline-block;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .button:hover {
@@ -124,10 +125,18 @@ p {
 }
 
 .github-button {
-    background-color: #209bed;
+    background-color: #1fcccc;
 }
 
 .github-button:hover {
+    background-color: #00a6a6;
+}
+
+.releases-button {
+    background-color: #209bed;
+}
+
+.releases-button:hover {
     background-color: #0079cb;
 }
 
