@@ -1,5 +1,5 @@
 // Select elements
-let releaseContainer = $("#releases-container");
+let releaseContainerElem = $("#releases-container");
 
 // Helper functions
 function zeroPad(string, numZeros) {
@@ -19,6 +19,7 @@ $(document).ready(() => {
             // Get needed release information
             let url = release["html_url"];
             let releaseTimestamp = release["published_at"];
+            let tagName = release["tag_name"];
             let name = release["name"];
             let body = release["body"];
             let assets = release["assets"];
@@ -55,20 +56,26 @@ $(document).ready(() => {
             }
 
             // Append HTML
-            releaseContainer.append(`<div class="row card">
-            <h2>${name}</h2>
-            <h4>${publishedAt}</h4>
-            <div>
-            ${bodyHTML}
-            </div>
-            <hr>
-            <div>
-                <span>Release Artifacts:</span>
-                ${artifactsHTML}
-            </div>
-            <hr>
-            <span style="font-size: 11pt">The original release post can be found <a href=${url}>here</a>.</span>
-        </div>`);
+            releaseContainerElem.append(
+                `<div class="row card">
+                    <a href="/release?tag=${tagName}">
+                        <h2>${name}</h2>
+                        <h4>${publishedAt}</h4>
+                    </a>
+                    <div>
+                        ${bodyHTML}
+                    </div>
+                    <hr>
+                    <div>
+                        <span>Release Artifacts:</span>
+                        ${artifactsHTML}
+                    </div>
+                    <hr>
+                    <span style="font-size: 11pt">The original release post can be found <a href=${url}>here</a>.</span>
+                </div>`
+        );
         });
+    }).fail((jqXHR, textStatus, errorThrown) => {
+        releaseContainerElem.append(`<div class="row card">Can't find releases.</div>`);
     });
 });
