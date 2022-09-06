@@ -31,7 +31,7 @@ $(document).ready(() => {
 
             // Format it for presentation
             let releaseYear = releaseDate.getFullYear();
-            let releaseMonth = padDateInfo(releaseDate.getMonth());
+            let releaseMonth = padDateInfo(releaseDate.getMonth() + 1);  // Because month 0 = January
             let releaseDay = padDateInfo(releaseDate.getDate());
             let releaseHour = padDateInfo(releaseDate.getHours());
             let releaseMinute = padDateInfo(releaseDate.getMinutes());
