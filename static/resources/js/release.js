@@ -3,7 +3,6 @@ let releaseNameElem = $("#release-name");
 let releaseDateElem = $("#release-date");
 let releaseInfoElem = $("#release-info");
 
-
 // Helper functions
 function zeroPad(string, numZeros) {
     return String(string).padStart(numZeros, "0");
@@ -19,7 +18,7 @@ $(document).ready(() => {
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
-    
+
     // Get requested release info
     let releaseTag = params.tag;
 
@@ -37,18 +36,7 @@ $(document).ready(() => {
 
         // Parse release time
         let releaseDate = new Date(Date.parse(releaseTimestamp));
-        let localUTCOffset = (-releaseDate.getTimezoneOffset()) / 60;  // In hours
-        let localUTCOffsetSign = localUTCOffset >= 0 ? "+" : "-";
-        console.log(releaseDate.getMonth());
-
-        // Format it for presentation
-        let releaseYear = releaseDate.getFullYear();
-        let releaseMonth = padDateInfo(releaseDate.getMonth() + 1);  // Because month 0 = January
-        let releaseDay = padDateInfo(releaseDate.getDate());
-        let releaseHour = padDateInfo(releaseDate.getHours());
-        let releaseMinute = padDateInfo(releaseDate.getMinutes());
-
-        let publishedAt = `${releaseYear}-${releaseMonth}-${releaseDay}, ${releaseHour}:${releaseMinute} (UTC${localUTCOffsetSign}${localUTCOffset})`;
+        let publishedAt = getPublishedAtString(releaseDate);
 
         // Update hero box info
         releaseNameElem.html(name);
@@ -59,17 +47,7 @@ $(document).ready(() => {
         let bodyHTML = converter.makeHtml(body);
 
         // Form release artifacts HTML code
-        let artifactsHTML = ""
-
-        if (assets.length != 0) {
-            artifactsHTML += "<ul>";
-            assets.forEach((asset) => {
-                artifactsHTML += `<li><a href=${asset["browser_download_url"]}>${asset["name"]}</a></li>`;
-            });
-            artifactsHTML += "</ul>";
-        } else {
-            artifactsHTML = "<span>None available.</span>"
-        }
+        let artifactsHTML = generateArtifactsHTML(assets);
 
         // Append HTML
         releaseInfoElem.append(`<div class="row card">
@@ -84,7 +62,7 @@ $(document).ready(() => {
         <hr>
         <span style="font-size: 11pt">The original release post can be found <a href=${url}>here</a>.</span>
     </div>`);
-    }).fail((jqXHR, textStatus, errorThrown) => {
+    }).fail((ignored1, ignored2, ignored3) => {
         releaseNameElem.html("Unable To Find Specified Release");
         releaseInfoElem.append(`<div class="row card">Can't find specified release.</div>`);
     });

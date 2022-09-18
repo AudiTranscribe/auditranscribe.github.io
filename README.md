@@ -1,2 +1,4 @@
 # auditranscribe.github.io
-AudiTranscribe Github Page
+AudiTranscribe GitHub page.
+
+See the website at [auditranscribe.app](https://auditranscribe.app/).

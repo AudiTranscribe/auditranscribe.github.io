@@ -7,6 +7,14 @@ html {
     scroll-behavior: smooth;
 }
 
+code {
+    font-family: "Menlo", "Monaco", "Consolas", monospace;
+    padding: 0 3px;
+    color: #232629ff;
+    background-color: #e3e6e8ff;
+    border-radius: 5px;
+}
+
 /* CLASS-BASED STYLING */
 /* Alert Styling */
 .alert {
