@@ -17,9 +17,19 @@ function generateArtifactsHTML(assets) {
 
     if (assets.length !== 0) {
         artifactsHTML += "<ul>";
-        assets.forEach((asset) => {
-            artifactsHTML += `<li><a href=${asset["browser_download_url"]}>${asset["name"]}</a></li>`;
-        });
+        for (let i = 0; i < assets.length; i++) {
+            // Get the asset
+            let asset = assets[i];
+
+            // Get the platform name and tag from the asset
+            let platformName = asset["name"].split("-")[0];
+
+            let urlSplit = asset["browser_download_url"].split("/");
+            let tag = urlSplit[urlSplit.length - 2];
+
+            // Add to the artifactsHTML
+            artifactsHTML += `<li><a href="/download?platform=${platformName}&tag=${tag}">${asset["name"]}</a></li>`;
+        }
         artifactsHTML += "</ul>";
     } else {
         artifactsHTML = "<span>None available.</span>"

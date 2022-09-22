@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <!-- Set meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define title block -->
+    <title>AudiTranscribe - Download</title>
+
+    <!-- Define The Favicon -->
+    <link rel="icon" type="image/png" href="static/resources/img/favicon.png">
+
+    <!-- Include vendors' CSS files -->
+    <link rel="stylesheet" type="text/css" href="static/vendors/css/normalize.css">
+
+    <!-- Include my CSS files -->
+    <link rel="stylesheet" type="text/css" href="static/resources/css/base.css">
+    <link rel="stylesheet" type="text/css" href="static/resources/css/releases.css">
+
+    <!-- Load fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+          rel="stylesheet">
+
+    <!-- Include vendors' JS files -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+            integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Include our JS files -->
+    <script src="static/resources/js/common.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <nav>
+        <a href="/">
+            <img src="static/resources/img/favicon.png" alt="AudiTranscribe's Logo" class="logo">
+        </a>
+    </nav>
+
+    <div class="hero-box">
+        <h1>Downloading AudiTranscribe <span id="release-tag"></span></h1>
+    </div>
+</div>
+
+<div class="content content-alt">
+    <h1>Installation Instructions</h1>
+    <div class="container">
+        <div class="row card">
+            <p>
+                Please visit <a href="/installation-instructions">here</a> to see how to install AudiTranscribe.
+            </p>
+        </div>
+    </div>
+</div>
+
+<a style="display: none" id="download-link"></a>
+
+<script src="static/resources/js/download.js"></script>
+
+</body>
+
+</html>

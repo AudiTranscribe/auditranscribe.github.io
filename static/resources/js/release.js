@@ -16,11 +16,11 @@ function padDateInfo(dateInfo) {
 $(document).ready(() => {
     // Get page arguments
     const params = new Proxy(new URLSearchParams(window.location.search), {
-        get: (searchParams, prop) => searchParams.get(prop),
+        get: (searchParams, prop) => searchParams.get(prop.toString()),
     });
 
     // Get requested release info
-    let releaseTag = params.tag;
+    let releaseTag = params["tag"];
 
     // Get release's info from GitHub
     $.get("https://api.github.com/repos/AudiTranscribe/AudiTranscribe/releases/tags/" + releaseTag, (release) => {
