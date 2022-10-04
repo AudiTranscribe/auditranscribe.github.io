@@ -18,29 +18,3 @@ code {
 footer p {
     text-align: center;
 }
-
-/* CLASS-BASED STYLING */
-/* Alert Styling */
-.alert {
-    position: absolute;
-    padding: 10px;
-    background-color: #b1ede8;
-    color: black;
-    opacity: 1;
-    transition: opacity 0.3s;
-    margin-bottom: 15px;
-}
-
-.alert-box-close-button {
-    margin-left: 15px;
-    color: #555;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-}
-
-.alert-box-close-button:hover {
-    color: black;
-}

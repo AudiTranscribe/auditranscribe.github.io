@@ -13,8 +13,7 @@ $(document).ready(() => {
         .then(response => response.text())
         .then(text => {
             // Parse as markdown
-            let converter = new showdown.Converter();
-            let bodyHTML = converter.makeHtml(text);
+            let bodyHTML = CONVERTER.makeHtml(text);
             $("#macos-installation-instructions").html(bodyHTML);
         });
 });

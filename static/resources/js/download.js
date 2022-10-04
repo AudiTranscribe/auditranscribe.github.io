@@ -14,7 +14,8 @@ $(document).ready(() => {
     let platform = params["platform"];
 
     // Download file
-    let downloadURL = `https://github.com/AudiTranscribe/AudiTranscribe/releases/download/${releaseTag}/${platform}-Installer.zip`;
+    let downloadURL =
+        `https://github.com/AudiTranscribe/AudiTranscribe/releases/download/${releaseTag}/${platform}-Installer.zip`;
     downloadLinkElem.attr("href", downloadURL);
 
     downloadLinkElem.click((e) => {

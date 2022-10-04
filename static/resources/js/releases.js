@@ -29,8 +29,7 @@ $(document).ready(() => {
             let publishedAt = getPublishedAtString(releaseDate);
 
             // Parse the body as markdown
-            let converter = new showdown.Converter();
-            let bodyHTML = converter.makeHtml(body);
+            let bodyHTML = CONVERTER.makeHtml(body);
 
             // Form release artifacts HTML code
             let artifactsHTML = generateArtifactsHTML(assets);

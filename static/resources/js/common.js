@@ -1,3 +1,8 @@
+// Common constants
+const CONVERTER = new showdown.Converter({strikethrough: true});
+CONVERTER.setFlavor("github");
+
+// Common functions
 function getPublishedAtString(releaseDate) {
     let localUTCOffset = (-releaseDate.getTimezoneOffset()) / 60;  // In hours
     let localUTCOffsetSign = localUTCOffset >= 0 ? "+" : "-";
