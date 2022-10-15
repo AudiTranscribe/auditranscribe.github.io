@@ -121,19 +121,19 @@ p {
 }
 
 .github-button {
-    background-color: #0fbbbb;
+    background-color: #20a0a0;
 }
 
 .github-button:hover {
-    background-color: #00a6a6;
+    background-color: #1b8787;
 }
 
 .releases-button {
-    background-color: #209bed;
+    background-color: #2878c8;
 }
 
 .releases-button:hover {
-    background-color: #0079cb;
+    background-color: #2368ad;
 }
 
 /* QUERIES */
