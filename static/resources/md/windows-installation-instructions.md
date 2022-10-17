@@ -7,5 +7,6 @@
 4. Run the application.
     - It is highly likely that an alert like "Windows protected your PC" would pop up. This is normal, and is due to
       AudiTranscribe not being a recognized app yet.
+    - If you see such an alert, click on "More Info", and then click on "Run Anyway" at the bottom of the screen.
 5. Follow the installation instructions.
 6. The application should be installed once completed.
