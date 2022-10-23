@@ -21,7 +21,7 @@ $(document).ready(() => {
             let releaseTimestamp = release["published_at"];
             let tagName = release["tag_name"];
             let name = release["name"];
-            let body = release["body"];
+            let body = treatMarkdownForBody(release["body"]);
             let assets = release["assets"];
 
             // Parse release time

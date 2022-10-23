@@ -28,7 +28,7 @@ $(document).ready(() => {
         let url = release["html_url"];
         let releaseTimestamp = release["published_at"];
         let name = release["name"];
-        let body = release["body"];
+        let body = treatMarkdownForBody(release["body"]);
         let assets = release["assets"];
 
         // Update document title to the release name
