@@ -120,6 +120,15 @@ p {
     cursor: pointer;
 }
 
+.docs-button {
+    background-color: #a345e6;
+}
+
+.docs-button:hover {
+    background-color: #7f36b3;
+}
+
+
 .github-button {
     background-color: #20a0a0;
 }
@@ -129,11 +138,11 @@ p {
 }
 
 .releases-button {
-    background-color: #2878c8;
+    background-color: #456de6;
 }
 
 .releases-button:hover {
-    background-color: #2368ad;
+    background-color: #3655b3;
 }
 
 /* QUERIES */
