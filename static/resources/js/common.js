@@ -45,7 +45,7 @@ function generateArtifactsHTML(assets) {
 
 function treatMarkdownForBody(body) {
     // Replace a weird heading in the body, if present
-    body = body.replace(/# \[\d\.\d.\d]\(.+\) \(\d{4}-\d{2}-\d{2}\)\r\n\r\n/, "");
+    body = body.replace(/#+ \[\d\.\d.\d]\(.+\) \(\d{4}-\d{2}-\d{2}\)\r\n\r\n/, "");
 
     return body;
 }
