@@ -38,8 +38,8 @@ $(document).ready(() => {
             releaseContainerElem.append(
                 `<div class="row card">
                     <a href="/release?tag=${tagName}">
-                        <h2>${name}</h2>
-                        <h4>${publishedAt}</h4>
+                        <h2 class="release-name">${name}</h2>
+                        <h4 class="published-at">${publishedAt}</h4>
                     </a>
                     <div>
                         ${bodyHTML}
