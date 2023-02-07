@@ -26,6 +26,12 @@ function generateArtifactsHTML(assets) {
             // Get the asset
             let asset = assets[i];
 
+            // If asset is a SHA256 hash we include a special download link
+            if (asset["name"].includes("sha256")) {
+                artifactsHTML += `<li><a href="${asset["browser_download_url"]}">${asset["name"]}</a></li>`;
+                continue;
+            }
+
             // Get the platform name and tag from the asset
             let platformName = asset["name"].split("-")[0];
 

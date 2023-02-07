@@ -1,6 +1,7 @@
 /* MAIN STYLING */
 /* Basic Styling */
 h1, h2, h3, h4 {
+    text-align: center;
     margin-top: 0;
     margin-bottom: 1px;
 }
@@ -69,25 +70,6 @@ nav {
 .logo {
     margin-top: 30px;
     float: left;
-}
-
-.published-at, .release-name {
-    text-align: center;
-}
-
-/* Others */
-.row > a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    margin-top: 0;
-}
-
-/* ID-BASED STYLING */
-#release-name, #release-date {
-    text-align: center;
 }
 
 /* QUERIES */
