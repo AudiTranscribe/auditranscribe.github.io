@@ -16,17 +16,6 @@ p {
     line-height: 135%;
 }
 
-/* CLASS-BASED STYLING */
-/* Device Styling */
-.desktop {
-    display: block;
-}
-
-.mobile {
-    display: none;
-}
-
-/* General Styling */
 .card {
     margin: 20px;
 }
@@ -56,17 +45,6 @@ p {
     height: 100vh;
 }
 
-.hero-box {
-    width: 100%;
-    top: 50%;
-    transform: translate(0%, -50%);
-    text-align: center;
-}
-
-.row {
-    display: flex;
-}
-
 /* Navbar */
 .logo {
     margin-top: 30px;
@@ -87,6 +65,7 @@ p {
     display: inline-block;
     font-weight: bold;
     text-decoration: none;
+    transition: all 0.2s;
 }
 
 .button:hover, .button:visited, .button:visited:hover {
@@ -95,6 +74,15 @@ p {
 
 .button:hover {
     cursor: pointer;
+}
+
+/* MAIN STYLING */
+/* Hero Box */
+.hero-box {
+    width: 100%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    text-align: center;
 }
 
 .docs-button {
@@ -120,6 +108,23 @@ p {
 
 .releases-button:hover {
     background-color: #3655b3;
+}
+
+/* FEATURES */
+.feature-entry {
+    text-align: justify;
+}
+
+.feature-entry-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.feature-entry-image img {
+    max-width: 90%;
+    max-height: 300px;
 }
 
 /* QUERIES */
