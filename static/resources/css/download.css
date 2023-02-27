@@ -1,30 +1,23 @@
 /* MAIN STYLING */
-/* Basic Styling */
 h1, h2, h3, h4 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 1px;
 }
 
-/* CLASS-BASED STYLING */
-/* Fixme */
-
 /* QUERIES */
-/* Fixme */
-/* Styling for screens that are smaller than the maximum width*/
 @media screen and (max-width: 1080px) {
-    /* Device Styling */
-    .desktop {
-        display: none;
-    }
-
-    /* General Styling */
     .card-container {
         display: block;
     }
+}
 
-    /* Navbar */
-    .logo {
-        display: none;
+@media screen and (max-width: 1024px) {
+    .header {
+        height: 50vh;
+    }
+
+    .hero-box {
+        top: 25vh;
     }
 }
