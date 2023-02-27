@@ -129,15 +129,7 @@ p {
 
 /* QUERIES */
 @media screen and (max-width: 1080px) {
-    .card-container {
-        display: block;
-    }
-
     .card {
         width: calc(100% - 90px);
-    }
-
-    .logo {
-        display: none;
     }
 }

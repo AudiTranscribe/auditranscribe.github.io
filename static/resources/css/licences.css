@@ -10,8 +10,4 @@ h1, h2 {
     .hide-if-width-too-small {
         display: none;
     }
-
-    .card-container {
-        display: block;
-    }
 }

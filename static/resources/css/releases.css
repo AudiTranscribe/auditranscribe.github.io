@@ -29,10 +29,3 @@ ul {
 #release-name, #release-date {
     text-align: center;
 }
-
-/* QUERIES */
-@media screen and (max-width: 1080px) {
-    .card-container {
-        display: block;
-    }
-}
