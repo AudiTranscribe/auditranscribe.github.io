@@ -12,8 +12,8 @@ html {
 code {
     font-family: "Menlo", "Monaco", "Consolas", monospace;
     padding: 0 3px;
-    color: #dcd9d6ff;
-    background-color: #1c1917ff;
+    color: rgb(200, 210, 215);
+    background-color: rgb(70, 75, 85);
     border-radius: 5px;
 }
 
