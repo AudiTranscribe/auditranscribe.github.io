@@ -128,7 +128,6 @@ p {
 }
 
 /* QUERIES */
-/* Styling for screens that are smaller than the maximum width*/
 @media screen and (max-width: 1080px) {
     .card-container {
         display: block;
