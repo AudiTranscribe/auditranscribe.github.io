@@ -4,7 +4,9 @@ html {
     text-rendering: optimizeLegibility;
     font-size: 20px;
     font-family: "Lato", "Arial", sans-serif;
+    color: white;
     scroll-behavior: smooth;
+    background-color: black;
 }
 
 code {
@@ -15,6 +17,93 @@ code {
     border-radius: 5px;
 }
 
+nav {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 footer p {
     text-align: center;
+}
+
+/* Hyperlink styling */
+a {
+    color: rgb(148, 179, 242);
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: rgb(82, 129, 224);
+}
+
+a:visited {
+    color: rgb(161, 125, 232);
+}
+
+a:visited:hover {
+    color: rgb(129, 82, 224);
+}
+
+/* CLASS-BASED STYLING */
+/* General Styling */
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header_background.png);
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    background-attachment: fixed;
+}
+
+.hero-box {
+    position: absolute;
+    top: 15vh;
+    transform: translate(calc(50vw - 50%), -50%);
+    color: white;
+}
+
+.hero-box > p {
+    max-width: 75vw;
+    text-align: center;
+}
+
+/* Navbar */
+.logo {
+    margin-top: 30px;
+    height: 50px;
+    width: auto;
+    float: left;
+}
+
+/* Main classes */
+.card {
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+    padding: 25px !important;
+    margin: 20px 0;
+}
+
+.card p {
+    text-align: justify;
+}
+
+.card-alt {
+    background-color: black;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content {
+    padding-bottom: 15px;
+}
+
+.content-alt {
+    background-color: rgb(40, 40, 40);
+}
+
+.logo {
+    margin-top: 30px;
+    float: left;
 }

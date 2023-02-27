@@ -12,11 +12,6 @@ h1, h2 {
     margin-bottom: 1px;
 }
 
-nav {
-    max-width: 90%;
-    margin: 0 auto;
-}
-
 p {
     line-height: 135%;
 }
@@ -33,27 +28,11 @@ p {
 
 /* General Styling */
 .card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 25px !important;
     margin: 20px;
 }
 
 .card-container {
     display: flex;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.content {
-    padding-bottom: 15px;
-}
-
-.content-alt {
-    background-color: #f0f0f0;
 }
 
 .column {
@@ -74,20 +53,14 @@ p {
 }
 
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header_background.png);
-    background-size: cover;
-    background-position: center;
     height: 100vh;
-    background-attachment: fixed;
 }
 
 .hero-box {
-    position: absolute;
     width: 100%;
     top: 50%;
     transform: translate(0%, -50%);
     text-align: center;
-    color: white;
 }
 
 .row {
@@ -114,6 +87,10 @@ p {
     display: inline-block;
     font-weight: bold;
     text-decoration: none;
+}
+
+.button:hover, .button:visited, .button:visited:hover {
+    color: inherit;
 }
 
 .button:hover {
@@ -146,6 +123,7 @@ p {
 }
 
 /* QUERIES */
+/* Fixme */
 /* Styling for screens that are smaller than the maximum width*/
 @media screen and (max-width: 1080px) {
     /* Device Styling */
