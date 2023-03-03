@@ -16,4 +16,12 @@ $(document).ready(() => {
             let bodyHTML = CONVERTER.makeHtml(text);
             $("#macos-installation-instructions").html(bodyHTML);
         });
+
+    fetch("static/resources/md/linux-installation-instructions.md")
+        .then(response => response.text())
+        .then(text => {
+            // Parse as markdown
+            let bodyHTML = CONVERTER.makeHtml(text);
+            $("#linux-installation-instructions").html(bodyHTML);
+        });
 });
