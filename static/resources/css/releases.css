@@ -1,5 +1,4 @@
 /* MAIN STYLING */
-/* Basic Styling */
 h1, h2, h3, h4 {
     margin-top: 0;
     margin-bottom: 1px;
@@ -11,66 +10,7 @@ nav {
 }
 
 /* CLASS-BASED STYLING */
-/* General Styling */
-.header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header_background.png);
-    background-size: cover;
-    background-position: center;
-    height: 30vh;
-    background-attachment: fixed;
-}
-
-.hero-box {
-    position: absolute;
-    top: 15vh;
-    transform: translate(calc(50vw - 50%), -50%);
-    color: white;
-}
-
-.hero-box > p {
-    max-width: 75vw;
-    text-align: center;
-}
-
-/* Navbar */
-.logo {
-    margin-top: 30px;
-    height: 50px;
-    width: auto;
-    float: left;
-}
-
 /* Main classes */
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 25px !important;
-    margin: 20px 0;
-}
-
-.card p {
-    text-align: justify;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.content {
-    padding-top: 10px;
-    padding-bottom: 15px;
-}
-
-.content-alt {
-    background-color: #f0f0f0;
-}
-
-.logo {
-    margin-top: 30px;
-    float: left;
-}
-
 .published-at, .release-name {
     text-align: center;
 }
@@ -88,23 +28,4 @@ ul {
 /* ID-BASED STYLING */
 #release-name, #release-date {
     text-align: center;
-}
-
-/* QUERIES */
-/* Styling for screens that are smaller than the maximum width*/
-@media screen and (max-width: 1080px) {
-    /* Device Styling */
-    .desktop {
-        display: none;
-    }
-
-    /* General Styling */
-    .card-container {
-        display: block;
-    }
-
-    /* Navbar */
-    .logo {
-        display: none;
-    }
 }

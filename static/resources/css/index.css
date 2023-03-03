@@ -12,48 +12,16 @@ h1, h2 {
     margin-bottom: 1px;
 }
 
-nav {
-    max-width: 90%;
-    margin: 0 auto;
-}
-
 p {
     line-height: 135%;
 }
 
-/* CLASS-BASED STYLING */
-/* Device Styling */
-.desktop {
-    display: block;
-}
-
-.mobile {
-    display: none;
-}
-
-/* General Styling */
 .card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 25px !important;
     margin: 20px;
 }
 
 .card-container {
     display: flex;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.content {
-    padding-bottom: 15px;
-}
-
-.content-alt {
-    background-color: #f0f0f0;
 }
 
 .column {
@@ -74,24 +42,7 @@ p {
 }
 
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header_background.png);
-    background-size: cover;
-    background-position: center;
     height: 100vh;
-    background-attachment: fixed;
-}
-
-.hero-box {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translate(0%, -50%);
-    text-align: center;
-    color: white;
-}
-
-.row {
-    display: flex;
 }
 
 /* Navbar */
@@ -114,10 +65,24 @@ p {
     display: inline-block;
     font-weight: bold;
     text-decoration: none;
+    transition: all 0.2s;
+}
+
+.button:hover, .button:visited, .button:visited:hover {
+    color: inherit;
 }
 
 .button:hover {
     cursor: pointer;
+}
+
+/* MAIN STYLING */
+/* Hero Box */
+.hero-box {
+    width: 100%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    text-align: center;
 }
 
 .docs-button {
@@ -145,19 +110,26 @@ p {
     background-color: #3655b3;
 }
 
+/* FEATURES */
+.feature-entry {
+    text-align: justify;
+    padding-bottom: 100px;
+}
+
+.feature-entry-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.feature-entry-image img {
+    width: 100%;
+    height: auto;
+}
+
 /* QUERIES */
-/* Styling for screens that are smaller than the maximum width*/
-@media screen and (max-width: 1080px) {
-    /* Device Styling */
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
-        display: block;
-    }
-
-    /* General Styling */
+@media (max-width: 768px) {
     .card-container {
         display: block;
     }
@@ -165,17 +137,18 @@ p {
     .card {
         width: calc(100% - 90px);
     }
+}
 
-    .row {
-        display: block;
+@media (min-width: 769px) {
+    .feature-entry {
+        display: flex;
     }
 
-    .row img, .row video {
-        width: 100%;
+    .feature-entry:nth-child(even) {
+        flex-direction: row-reverse;
     }
 
-    /* Navbar */
-    .logo {
-        display: none;
+    .feature-entry-text, .feature-entry-image {
+        padding: 0 20px;
     }
 }
