@@ -25,6 +25,10 @@ ul {
     margin-top: 0;
 }
 
+li {
+    overflow-wrap: anywhere;
+}
+
 /* ID-BASED STYLING */
 #release-name, #release-date {
     text-align: center;
