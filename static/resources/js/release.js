@@ -32,7 +32,7 @@ $(document).ready(() => {
         let assets = release["assets"];
 
         // Update document title to the release name
-        document.title = "AudiTranscribe - " + name;
+        document.title = name + " | AudiTranscribe";
 
         // Parse release time
         let releaseDate = new Date(Date.parse(releaseTimestamp));
